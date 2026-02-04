@@ -123,3 +123,24 @@ GET    /api/v1/user/logout
 POST   /api/v1/user/profile/update
 GET    /api/v1/user/logout
 POST   /api/v1/user/profile/update
+```
+### 🏢 Company Routes
+```http
+POST   /api/v1/company/register
+GET    /api/v1/company/get
+GET    /api/v1/company/get/:id
+PUT    /api/v1/company/update/:id
+
+```
+
+### 📄 Application Routes
+```http
+GET    /api/v1/application/apply/:id
+GET    /api/v1/application/get
+GET    /api/v1/application/:id/applicants
+POST   /api/v1/application/status/:id/update
+
+
+```
+
+
