@@ -112,6 +112,9 @@ A **production-ready Job Portal** built using the **MERN stack**, enabling job s
 - **Queries:** Aggregation Pipelines
 
 ---
+```md
+> All API routes are protected using JWT-based authentication middleware.
+```
 
 ## 📂 API Routes Overview
 
@@ -139,7 +142,22 @@ GET    /api/v1/application/apply/:id
 GET    /api/v1/application/get
 GET    /api/v1/application/:id/applicants
 POST   /api/v1/application/status/:id/update
+```
 
+### 📄 Application Routes
+```http
+GET    /api/v1/application/apply/:id
+GET    /api/v1/application/get
+GET    /api/v1/application/:id/applicants
+POST   /api/v1/application/status/:id/update
+```
+
+### 📌 Job Routes
+```http
+POST   /api/v1/job/post
+GET    /api/v1/job/get
+GET    /api/v1/job/getadminjobs
+GET    /api/v1/job/get/:id
 
 ```
 
