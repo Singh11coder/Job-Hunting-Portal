@@ -5,6 +5,8 @@
 A **production-ready Job Portal** built using the **MERN stack**, enabling job seekers to discover and apply for jobs while allowing recruiters to manage companies, post jobs, and track applications — all secured with **JWT authentication** and optimized **RESTful APIs**.
 
 ---
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/e06a3b82-de01-4b00-9f86-39fc9a3e5f3c" />
+
 
 ## 🌟 Features
 
