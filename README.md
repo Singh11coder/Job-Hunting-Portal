@@ -1,12 +1,13 @@
-# MERN_Job_Portal_Application
+# MERN_Job_Portal_Application With LLM + RAG Integration
 
-## 💼 Full-Stack Job Portal with Authentication & Role-Based Access
+## 💼 AI-Powered Full-Stack Job Portal with Authentication & Role-Based Access
 
-A **production-ready Job Portal** built using the **MERN stack**, enabling job seekers to discover and apply for jobs while allowing recruiters to manage companies, post jobs, and track applications — all secured with **JWT authentication** and optimized **RESTful APIs**.
+A **production-ready Job Portal** built using the **MERN stack**, enhanced with **LLM + RAG architecture and Vector Database**, enabling intelligent job discovery, resume analysis, and personalized recommendations — all secured with **JWT authentication** and optimized **RESTful APIs**.
 
 ---
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/e06a3b82-de01-4b00-9f86-39fc9a3e5f3c" />
 
+---
 
 ## 🌟 Features
 
@@ -50,14 +51,41 @@ A **production-ready Job Portal** built using the **MERN stack**, enabling job s
   - Recruiters can create and manage job listings
   - Define job requirements and metadata
 
-- **Advanced Job Search**
-  - Keyword-based search
+- **Advanced Job Search (AI-Enhanced)**
+  - Keyword-based + **Semantic Search using Vector DB**
   - Real-time filtering
   - Optimized MongoDB aggregation queries
+  - Context-aware job discovery using embeddings
 
 - **Responsive Job Feed**
   - Mobile-friendly layout
   - Fast loading job listings
+
+---
+
+### 🤖 AI-Powered Features (LLM + RAG)
+
+- **Resume Analysis (LLM)**
+  - Extract skills, experience, and keywords
+  - Perform **skill-gap detection** against job descriptions
+  - Generate AI-driven improvement suggestions
+
+- **Semantic Search (Vector DB)**
+  - Store job and user embeddings in **FAISS / Pinecone**
+  - Enable context-based queries instead of keyword-only search
+
+- **Personalized Recommendations (RAG)**
+  - Combine **LLM + Vector DB** for relevant job matching
+  - Context-aware ranking based on user profile
+
+- **AI Resume & Cover Letter Generator**
+  - Generate tailored resumes and cover letters
+  - Improve application quality and success rate
+
+- **Recruiter AI Assistant**
+  - Auto-summarize candidate profiles
+  - Rank applicants based on job fit
+  - Reduce manual screening effort
 
 ---
 
@@ -108,59 +136,17 @@ A **production-ready Job Portal** built using the **MERN stack**, enabling job s
 - **File Uploads:** Multer
 - **Cloud Storage:** Cloudinary
 
+### AI / LLM Stack
+- **LLM APIs:** OpenAI / Gemini
+- **RAG Architecture:** LangChain / Custom Pipeline
+- **Vector Database:** FAISS / Pinecone
+- **Embeddings:** OpenAI Embeddings / Sentence Transformers
+
 ### Database
 - **Database:** MongoDB
 - **ODM:** Mongoose
-- **Queries:** Aggregation Pipelines
+- **Queries:** Aggregation Pipelines + Vector Search
 
 ---
 ```md
 > All API routes are protected using JWT-based authentication middleware.
-```
-
-## 📂 API Routes Overview
-
-### 👤 User Routes
-```http
-POST   /api/v1/user/register
-POST   /api/v1/user/login
-GET    /api/v1/user/logout
-POST   /api/v1/user/profile/update
-GET    /api/v1/user/logout
-POST   /api/v1/user/profile/update
-```
-### 🏢 Company Routes
-```http
-POST   /api/v1/company/register
-GET    /api/v1/company/get
-GET    /api/v1/company/get/:id
-PUT    /api/v1/company/update/:id
-
-```
-
-### 📄 Application Routes
-```http
-GET    /api/v1/application/apply/:id
-GET    /api/v1/application/get
-GET    /api/v1/application/:id/applicants
-POST   /api/v1/application/status/:id/update
-```
-
-### 📄 Application Routes
-```http
-GET    /api/v1/application/apply/:id
-GET    /api/v1/application/get
-GET    /api/v1/application/:id/applicants
-POST   /api/v1/application/status/:id/update
-```
-
-### 📌 Job Routes
-```http
-POST   /api/v1/job/post
-GET    /api/v1/job/get
-GET    /api/v1/job/getadminjobs
-GET    /api/v1/job/get/:id
-
-```
-
-
